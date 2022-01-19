@@ -6,16 +6,20 @@
 
 It is a geometric arrangement for the steering wheel in order to solve *slipping* of both wheels drawing two different diameters with each wheel and make that the *translational velocity* goes on the same direction.
 
->![](Media_rsc/img1.png)
+<!--- ![](Media_rsc/img1.png) --->
+
+>![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img1.PNG?raw=true)
 >*fig1. Slipping*
 
->![](Media_rsc/img2.png)
+<!---![](Media_rsc/img2.png)-->
+>![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img2.PNG?raw=true)
 >*fig2. Slipping solved*
 
 \
 In order to perfom the Selfparking assistant, it is neccesary to know the maximum value of $\phi$ and $\theta$, in orther words the maximun steering angle so the parking route can be calculated.
 
->![](Media_rsc/img3.png)
+<!---![](Media_rsc/img3.png)-->
+>![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img3.PNG?raw=true)
 >*fig3. Plan view of Ackerman steering gear.*
 
 >**Resources**
