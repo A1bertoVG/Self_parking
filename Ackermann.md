@@ -1,4 +1,4 @@
-# Ackermann
+# Ackerman
 
 ## Ackermann steering geometry
 
