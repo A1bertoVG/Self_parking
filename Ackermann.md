@@ -9,10 +9,12 @@ It is a geometric arrangement for the steering wheel in order to solve *slipping
 <!--- ![](Media_rsc/img1.png) --->
 
 >![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img1.PNG?raw=true)
+>
 >*fig1. Slipping*
 
 <!---![](Media_rsc/img2.png)-->
 >![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img2.PNG?raw=true)
+>
 >*fig2. Slipping solved*
 
 \
@@ -20,6 +22,7 @@ In order to perfom the Selfparking assistant, it is neccesary to know the maximu
 
 <!---![](Media_rsc/img3.png)-->
 >![](https://github.com/A1bertoVG/Self_parking/blob/main/Media_rsc/img3.PNG?raw=true)
+>
 >*fig3. Plan view of Ackerman steering gear.*
 
 >**Resources**
