@@ -1,0 +1,254 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9098,        244]
+NotebookOptionsPosition[      7329,        210]
+NotebookOutlinePosition[      7732,        226]
+CellTagsIndexPosition[      7689,        223]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Ackerman for Evolution Parkassistent
+\
+\>", "Title",
+ CellChangeTimes->{{3.853402268776007*^9, 
+  3.8534022934392624`*^9}},ExpressionUUID->"8dce7095-6c27-45d3-8614-\
+d595ee49f727"],
+
+Cell[TextData[{
+ "In order to calculate the parallel parking route of the Evolution Car, we \
+will use the  ",
+ StyleBox["Ackerman steering calculations. ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ "For this we will use the next variables: \n\t- l = length between front and \
+real axel.\n\t- d = distance between piont of contac of rear wheels.\n\t-\
+\[ExponentialE]i1 = angle of inner front wheel."
+}], "Text",
+ CellChangeTimes->{{3.853402429286564*^9, 3.8534024982122374`*^9}, {
+  3.853402539750531*^9, 
+  3.8534027311400285`*^9}},ExpressionUUID->"d4a5a962-fa5d-41cc-83cd-\
+1124e3a045a3"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8534045477502165`*^9},ExpressionUUID->"0465155b-767f-4b74-a473-\
+df61a635e47e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"l", "=", " ", "2230"}], "\[IndentingNewLine]", 
+ RowBox[{"d", "=", " ", "1315"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["\[Theta]", "i1"], "=", " ", 
+  RowBox[{"40", " ", "Degree"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["\[Theta]", "i2"], "=", " ", 
+  RowBox[{"40", " ", "Degree"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "s1"], "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"l", "/", 
+     RowBox[{"tan", "[", 
+      SubscriptBox["\[Theta]", "i1"], "]"}]}], ")"}], "+", 
+   RowBox[{"(", 
+    RowBox[{"d", "/", "2"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "s2"], "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"l", "/", 
+     RowBox[{"tan", "[", 
+      SubscriptBox["\[Theta]", "i1"], "]"}]}], ")"}], "+", 
+   RowBox[{"(", 
+    RowBox[{"d", "/", "2"}], ")"}]}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.853404601324065*^9, 3.853404657370908*^9}, {
+  3.8534046904355745`*^9, 3.8534047594390383`*^9}, {3.853405189422521*^9, 
+  3.8534051927744513`*^9}, {3.853405262934797*^9, 3.8534052955125866`*^9}, {
+  3.853405346095563*^9, 3.853405411591019*^9}, {3.8534055288984118`*^9, 
+  3.8534055830050087`*^9}, {3.853405617644601*^9, 3.8534056303075786`*^9}, {
+  3.8534057609934874`*^9, 3.853405769198059*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"750b8ce0-15b2-415d-8c70-447fde74f322"],
+
+Cell[BoxData["2230"], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.8534057825494227`*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"a4fe41b3-f18d-4fc2-b5c6-7f8b441d559a"],
+
+Cell[BoxData["1315"], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.8534057825534124`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"5ef8ee1e-663e-43c8-89fa-7a670b099da5"],
+
+Cell[BoxData[
+ RowBox[{"40", " ", "\[Degree]"}]], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.8534057825574417`*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"5615d7fe-eaf1-4139-865e-89c65fbb8be1"],
+
+Cell[BoxData[
+ RowBox[{"40", " ", "\[Degree]"}]], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.853405782564399*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"f2b6619b-845b-4043-90c1-1b29676218d6"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1315", "2"], "+", 
+  FractionBox["2230", 
+   RowBox[{"tan", "[", 
+    RowBox[{"40", " ", "\[Degree]"}], "]"}]]}]], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.853405782570382*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"644002ea-bf60-4a51-b390-3502331d5010"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1315", "2"], "+", 
+  FractionBox["2230", 
+   RowBox[{"tan", "[", 
+    RowBox[{"40", " ", "\[Degree]"}], "]"}]]}]], "Output",
+ CellChangeTimes->{{3.853405551627716*^9, 3.853405586507511*^9}, 
+   3.853405633608456*^9, 3.8534056696069303`*^9, 3.853405782577363*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"e3eef5e1-e4f3-430b-a621-ba6c534f807f"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Now we calculate the ",
+ StyleBox["parking path geometry ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ "ideal case, which is when the car is perfectlz parallel to the parked car.\n\
+We need the distance ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["X", "C"], ","}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d9d8cd3f-1d2b-4e56-a749-1a66241bf10f"],
+ " which is the distance between both autos. The distance \
+\[OpenCurlyQuote]A-q\[CloseCurlyQuote] is evaluating using,\n\t\t\t\t\t\t\n\t\
+\t\t\t\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"'", "A"}], "-", 
+     RowBox[{"q", "'"}]}], "=", 
+    RowBox[{
+     SubscriptBox["d", "0"], "+", 
+     SubscriptBox["X", "c"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d1c4388e-c4a4-49c7-8e32-bec9b0990583"],
+ "\nWhere, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["d", "0"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "cb11f5cf-de64-4428-be3c-281c59fe5e28"],
+ " is the width of the car. Also,\n\n\t\t\t\t\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"'", "A"}], "-", 
+     RowBox[{"q", "'"}]}], "=", 
+    RowBox[{
+     SubscriptBox["R", "s2"], "+", 
+     RowBox[{"d", "/", "2"}]}]}], TraditionalForm]],ExpressionUUID->
+  "4713505e-8c77-4ed4-9a6e-433f31f75b17"],
+ ".\n\t\t\t\t\t\t"
+}], "Text",
+ CellChangeTimes->{{3.8534059388551517`*^9, 3.8534059483523593`*^9}, {
+  3.853406039987099*^9, 3.85340609461605*^9}, {3.853406168669697*^9, 
+  3.8534061732536654`*^9}, {3.853406269322384*^9, 
+  3.853406589345208*^9}},ExpressionUUID->"288733cd-c099-4db8-89ba-\
+89a3248e1438"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Aq", "=", " ", 
+  RowBox[{
+   SubscriptBox["R", "s2"], "+", 
+   RowBox[{"d", "/", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.853407276670404*^9, 3.8534073066283445`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"992d1156-581b-4963-b464-b93902c165ab"],
+
+Cell[BoxData[
+ RowBox[{"1315", "+", 
+  FractionBox["2230", 
+   RowBox[{"tan", "[", 
+    RowBox[{"40", " ", "\[Degree]"}], "]"}]]}]], "Output",
+ CellChangeTimes->{3.8534073282979107`*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"b8202180-520f-40f6-80d1-fd7b26504845"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.8534056832127867`*^9, {3.8534058009649076`*^9, 
+   3.8534058048469305`*^9}},ExpressionUUID->"4d4a517c-be2c-400a-b864-\
+cff71f1ac416"],
+
+Cell["", "Text",ExpressionUUID->"62d61e01-7cd3-457d-ba10-7e9c44ab43dc"]
+}, Open  ]]
+},
+WindowSize->{1600, 1157},
+WindowMargins->{{1358, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 18, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3efbc8a0-2435-43cf-bcd1-044ccd767dff"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 190, 6, 156, "Title",ExpressionUUID->"8dce7095-6c27-45d3-8614-d595ee49f727"],
+Cell[773, 30, 597, 13, 100, "Text",ExpressionUUID->"d4a5a962-fa5d-41cc-83cd-1124e3a045a3"],
+Cell[1373, 45, 149, 3, 48, "Input",ExpressionUUID->"0465155b-767f-4b74-a473-df61a635e47e"],
+Cell[CellGroupData[{
+Cell[1547, 52, 1398, 33, 179, "Input",ExpressionUUID->"750b8ce0-15b2-415d-8c70-447fde74f322"],
+Cell[2948, 87, 250, 3, 32, "Output",ExpressionUUID->"a4fe41b3-f18d-4fc2-b5c6-7f8b441d559a"],
+Cell[3201, 92, 250, 3, 32, "Output",ExpressionUUID->"5ef8ee1e-663e-43c8-89fa-7a670b099da5"],
+Cell[3454, 97, 278, 4, 32, "Output",ExpressionUUID->"5615d7fe-eaf1-4139-865e-89c65fbb8be1"],
+Cell[3735, 103, 276, 4, 32, "Output",ExpressionUUID->"f2b6619b-845b-4043-90c1-1b29676218d6"],
+Cell[4014, 109, 380, 8, 52, "Output",ExpressionUUID->"644002ea-bf60-4a51-b390-3502331d5010"],
+Cell[4397, 119, 380, 8, 52, "Output",ExpressionUUID->"e3eef5e1-e4f3-430b-a621-ba6c534f807f"]
+}, Open  ]],
+Cell[4792, 130, 1682, 50, 190, "Text",ExpressionUUID->"288733cd-c099-4db8-89ba-89a3248e1438"],
+Cell[CellGroupData[{
+Cell[6499, 184, 273, 6, 28, "Input",ExpressionUUID->"992d1156-581b-4963-b464-b93902c165ab"],
+Cell[6775, 192, 265, 6, 52, "Output",ExpressionUUID->"b8202180-520f-40f6-80d1-fd7b26504845"]
+}, Open  ]],
+Cell[7055, 201, 184, 4, 28, InheritFromParent,ExpressionUUID->"4d4a517c-be2c-400a-b864-cff71f1ac416"],
+Cell[7242, 207, 71, 0, 34, "Text",ExpressionUUID->"62d61e01-7cd3-457d-ba10-7e9c44ab43dc"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
