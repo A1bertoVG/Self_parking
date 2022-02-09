@@ -60,9 +60,9 @@ try:
 
         else:
             print("Comando no reconocido")
-            pwm_a.ChangeDutyCycle(int(vel))
-            pwm_b.ChangeDutyCycle(int(vel))
-            print
+        pwm_a.ChangeDutyCycle(int(vel))
+        pwm_b.ChangeDutyCycle(int(vel))
+        print
 
 except KeyboardInterrupt:
     pwm_a.stop()
