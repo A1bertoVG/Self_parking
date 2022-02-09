@@ -38,5 +38,9 @@ The velocity of sound $c$ is temperature dependentaccording to:
 >
 >>$T$ is the temperature of the air in °C.
 
+## 2. Design of the Sonic Transducer.
+### 2.1 Resonator.
+
+
 
  
