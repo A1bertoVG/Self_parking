@@ -37,6 +37,7 @@ def dir_backward():
     GPIO.output(mi1, False)
     GPIO.output(mi2, True)
 
+"""
 os.system('clear')
 
 print("Escriba F o B para seleccionar la direccion del auto y su velocidad")
@@ -74,6 +75,6 @@ except KeyboardInterrupt:
     print
     exit()
 
-
+"""
 
 

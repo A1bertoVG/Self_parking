@@ -34,14 +34,20 @@ def get_distance():
     distance = 10*( sig_time/0.00058)
     #distance = sig_time/2
 
-    print ('Distance: {} cm'.format(distance))
+    #print ('Distance: {} cm'.format(distance))
     return distance
+"""
 try:
 
     while True:
         distance = get_distance()
         time.sleep(0.05)
-        
+"""
+while True:
+        distance = get_distance()
+        time.sleep(0.05)
+
+"""
 except KeyboardInterrupt:
     GPIO.cleanup()
     os.system("clear")
@@ -49,4 +55,4 @@ except KeyboardInterrupt:
     print("Programa terminado")
     print
     exit()
-
+"""

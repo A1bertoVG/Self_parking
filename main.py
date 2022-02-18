@@ -6,14 +6,15 @@
 # import os, cmd
 # from tracemalloc import start
 from turtle import distance
-import rasp_motors
+from rasp_motors import dir_foward
 import Schallsensor
 import timeLib
 
+def inicialize():
+    print  ("Parklenkassistent starten? [J/N]")
 
-
-def search_place():
-    Schallsensor
+if __name__ == "__main__":
+    inicialize()
 
 
 
