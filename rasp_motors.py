@@ -44,7 +44,7 @@ print("Ejemplo: F50")
 print
 try:
     while True:
-        cmd = raw_input("Inserte comando")
+        cmd = input("Inserte comando")
         cmd = cmd.lower()
         
         dir = cmd[0]
