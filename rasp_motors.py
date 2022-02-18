@@ -37,6 +37,7 @@ def dir_backward():
     GPIO.output(mi1, False)
     GPIO.output(mi2, True)
 
+"""
 os.system('clear')
 
 print("Escriba F o B para seleccionar la direccion del auto y su velocidad")
@@ -44,7 +45,7 @@ print("Ejemplo: F50")
 print
 try:
     while True:
-        cmd = raw_input("Inserte comando")
+        cmd = input("Inserte comando")
         cmd = cmd.lower()
         
         dir = cmd[0]
@@ -74,6 +75,6 @@ except KeyboardInterrupt:
     print
     exit()
 
-
+"""
 
 

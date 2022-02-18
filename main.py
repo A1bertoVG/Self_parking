@@ -5,10 +5,16 @@
 # import RPi.GPIO as GPIO
 # import os, cmd
 # from tracemalloc import start
-import rasp_motors
+from turtle import distance
+from rasp_motors import dir_foward
 import Schallsensor
+import timeLib
 
-def selfpark():
-    rasp_motors.dir_foward()
+def inicialize():
+    print  ("Parklenkassistent starten? [J/N]")
+
+if __name__ == "__main__":
+    inicialize()
+
 
 
