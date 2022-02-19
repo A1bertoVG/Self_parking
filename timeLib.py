@@ -25,13 +25,15 @@ try:
             diftime = finish - start
 
             if diftime >= 6:
-                print ("espacio encointrado")
+                print ("espacio encontrado")
+                print (f'Tiempo = {diftime}s')
+
                 selfparking()
                 break
             else:
                 print("no existe espacio")
 
-            print ('Tiempo = {}s'.format(diftime))
+            print (f'Tiempo = {diftime}s')
             
 
         else:

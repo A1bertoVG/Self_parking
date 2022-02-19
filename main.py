@@ -7,6 +7,7 @@
 # from tracemalloc import start
 import rasp_motors
 import Schallsensor
+import ServoMotor
 
 def selfpark():
     rasp_motors.dir_foward()
