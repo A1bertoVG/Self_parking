@@ -25,6 +25,9 @@ pwm_b = GPIO.PWM(enb, 500)
 pwm_a.start(0)
 pwm_b.start(0)
 
+vel = 80
+sta = 40
+
 def dir_foward():
     GPIO.output(md1, True)
     GPIO.output(md2, False)
@@ -37,7 +40,15 @@ def dir_backward():
     GPIO.output(mi1, False)
     GPIO.output(mi2, True)
 
-"""
+def vel_foward():
+    pwm_a.ChangeDutyCycle(vel)
+    pwm_b.ChangeDutyCycle(vel)
+
+def vel_backward():
+    pwm_a.ChangeDutyCycle(sta)
+    pwm_b.ChangeDutyCycle(sta)
+
+'''
 os.system('clear')
 
 print("Escriba F o B para seleccionar la direccion del auto y su velocidad")
@@ -49,20 +60,23 @@ try:
         cmd = cmd.lower()
         
         dir = cmd[0]
-        vel = cmd[1:4]
+        #vel = cmd[1:4]
 
         if dir == "f":
             dir_foward()
-            print("Avance hacia delante a una velocidad de "+ vel)
+            print("Avance hacia delante a una velocidad de ")
+            vel_backward()
+
 
         elif dir == "b":
             dir_backward()
-            print("Avance hacia atras a una velocidad de "+ vel)
+            print("Avance hacia atras a una velocidad de ")
+            vel_foward()
 
         else:
             print("Comando no reconocido")
-        pwm_a.ChangeDutyCycle(int(vel))
-        pwm_b.ChangeDutyCycle(int(vel))
+        #pwm_a.ChangeDutyCycle(50)
+        #pwm_b.ChangeDutyCycle(50)
         print
 
 except KeyboardInterrupt:
@@ -74,7 +88,7 @@ except KeyboardInterrupt:
     print("Programa terminado")
     print
     exit()
+'''
 
-"""
 
 
