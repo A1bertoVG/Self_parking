@@ -12,10 +12,11 @@ print("Empezando programa")
 print(f'The name is: {__name__}')
 
 
-def busqueda():
+def suchen():
     rasp_motors.dir_foward()
     rasp_motors.vel_foward()
     Schallsensor.main()
+    
 
 def calc():
     if distance == int(8):
@@ -30,7 +31,7 @@ while True:
     cmd = input("Ingrese S").lower()
 
     if cmd == "s":
-        busqueda()
+        suchen()
         calc()
     elif cmd =="r":
         rasp_motors.dir_backward()
