@@ -3,19 +3,19 @@ import RPi.GPIO as GPIO
 import os 
 from time import sleep
 
-ena = 18
-enb = 19
-md1 = 23
-md2 = 24 
-mi1 = 6
-mi2 = 5
+ena = 13
+enb = 21
+in1 = 19
+in2 = 26 
+in3 = 16
+in4 = 20
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(md1, GPIO.OUT) #motor derecho fordward    
-GPIO.setup(md2, GPIO.OUT) #motor derecho backward    
-GPIO.setup(mi1, GPIO.OUT) #motor izquierdo backward  
-GPIO.setup(mi2, GPIO.OUT) #motor izquierdo backward  
+GPIO.setup(in1, GPIO.OUT) #motor derecho fordward    
+GPIO.setup(in2, GPIO.OUT) #motor derecho backward    
+GPIO.setup(in3, GPIO.OUT) #motor izquierdo backward  
+GPIO.setup(in4, GPIO.OUT) #motor izquierdo backward  
 GPIO.setup(ena, GPIO.OUT) #pwm derecho  
 GPIO.setup(enb, GPIO.OUT) #pwm izquierdo   
 
@@ -29,16 +29,16 @@ vel = 80
 sta = 40
 
 def dir_foward():
-    GPIO.output(md1, True)
-    GPIO.output(md2, False)
-    GPIO.output(mi1, True)
-    GPIO.output(mi2, False)
+    GPIO.output(in1, False)
+    GPIO.output(in2, True)
+    GPIO.output(in3, True)
+    GPIO.output(in4, False)
 
 def dir_backward():
-    GPIO.output(md1, False)
-    GPIO.output(md2, True)
-    GPIO.output(mi1, False)
-    GPIO.output(mi2, True)
+    GPIO.output(in1, True)
+    GPIO.output(in2, False)
+    GPIO.output(in3, False)
+    GPIO.output(in4, True)
 
 def vel_foward():
     pwm_a.ChangeDutyCycle(vel)

@@ -1,13 +1,8 @@
 #Main code
 
 import cmd
-from dis import dis
-from time import time
-from tracemalloc import start
-from turtle import distance
-#from turtle import distance
-import rasp_motors
 import Schallsensor
+import rasp_motors
 
 
 print("Empezando programa")
@@ -51,7 +46,7 @@ while True:
     if cmd == "s":
         rasp_motors.dir_foward()
         rasp_motors.vel_foward()
-        suchen()
+        #suchen()
     elif cmd =="r":
         rasp_motors.dir_backward()
         rasp_motors.vel_backward()
