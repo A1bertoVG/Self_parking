@@ -7,8 +7,8 @@ ena = 18
 enb = 19
 md1 = 23
 md2 = 24 
-mi1 = 6
-mi2 = 5
+mi1 = 5
+mi2 = 6
 
 GPIO.setmode(GPIO.BCM)
 
@@ -25,20 +25,26 @@ pwm_b = GPIO.PWM(enb, 500)
 pwm_a.start(0)
 pwm_b.start(0)
 
-vel = 80
+vel = 50
 sta = 40
 
-def dir_foward():
+def dir_backward():
     GPIO.output(md1, True)
     GPIO.output(md2, False)
     GPIO.output(mi1, True)
     GPIO.output(mi2, False)
 
-def dir_backward():
+def dir_foward():
     GPIO.output(md1, False)
     GPIO.output(md2, True)
     GPIO.output(mi1, False)
     GPIO.output(mi2, True)
+
+def stop():
+    GPIO.output(md1, False)
+    GPIO.output(md2, False)
+    GPIO.output(mi1, False)
+    GPIO.output(mi2, False)
 
 def vel_foward():
     pwm_a.ChangeDutyCycle(vel)
