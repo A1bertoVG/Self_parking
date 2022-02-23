@@ -2,58 +2,44 @@
 
 import cmd
 import Schallsensor
+import Schallsensor2
+import Schallsensor3
 import rasp_motors
-import time
+import time 
+
+
+def place_found():
+    rasp_motors.dir_foward()
+    rasp_motors.vel_foward()
+    time.sleep(1)
+    rasp_motors.pwm_a.ChangeDutyCycle(0)
+    rasp_motors.pwm_b.ChangeDutyCycle(0)
+    time.sleep(3)
+    rasp_motors.park()
+    print("Parked")
 
 
 print("Empezando programa")
+time.sleep(3)
 
-print(f'The name is: {__name__}')
 
-def park_run():
+        
+
+while True:
     rasp_motors.dir_foward()
     rasp_motors.vel_foward()
+    distance = Schallsensor.get_distance()
+    distance2 = Schallsensor2.get_distance2()
+    distance3 = Schallsensor3.get_distance3()
 
-def suchen():
-    while True:
-        distance = Schallsensor.get_distance()
+    print(f'Distance 1 = {distance}')
+    print(f'Distance 2 = {distance2}')
+    print(f'Distance 3 = {distance3}')
 
-        if distance >= 9:
-            start = time.time()
-        elif distance < 9:
-            finish = time.time()
-            dif_time = finish - start
+    time.sleep(0.05)
 
-            if dif_time >= 9:
-                rasp_motors.pwm_a.stop()
-                rasp_motors.pwm_b.stop()
-                park_run()
-
-            
     
-while True:
-
-    cmd = input("Ingrese S: ").lower()
-
-    if cmd == "s":
-        print("Running")
-        rasp_motors.dir_foward()
-        rasp_motors.vel_foward()
-        suchen()
-
-    elif cmd =="r":
-        rasp_motors.dir_backward()
-        rasp_motors.vel_backward()
-    elif cmd == "b":
-        rasp_motors.pwm_a.stop()
-        rasp_motors.pwm_b.stop()
-        print ("System stoped")
+    if distance2 > 15 < distance <= distance3 :
+        place_found()
+        
         break
-    print()
-    
-
-
-
-    
-
-

@@ -5,8 +5,8 @@ import time
 
 ena = 13
 enb = 21
-in1 = 19
-in2 = 26 
+in1 = 26
+in2 = 19 
 in3 = 16
 in4 = 20
 
@@ -55,31 +55,39 @@ def park():
     GPIO.output(in2, False)
     GPIO.output(in3, False)
     GPIO.output(in4, True)
-    time.sleep(1)
+    time.sleep(3)
+    pwm_a.ChangeDutyCycle(0)
+    pwm_b.ChangeDutyCycle(0)
+    time.sleep(2)
     pwm_a.ChangeDutyCycle(78)
     pwm_b.ChangeDutyCycle(50)
     GPIO.output(in1, True)
     GPIO.output(in2, False)
     GPIO.output(in3, False)
     GPIO.output(in4, True)
-    time.sleep(1)
+    time.sleep(3)
 
-
+'''
 while True:
 
 
     cmd = input("Ingrese S").lower()
 
     if cmd == "s":
-        dir_foward
+        dir_foward()
+        vel_foward()
     elif cmd =="r":
-        dir_backward
+        dir_backward()
+        vel_backward()
     elif cmd == "b":
+        pwm_a.ChangeDutyCycle(0)
+        pwm_b.ChangeDutyCycle(0)
+        time.sleep(3)
         park()
         print ("System running")
         break
     print
-
+'''
 
 '''
 os.system('clear')
