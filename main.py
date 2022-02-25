@@ -39,7 +39,7 @@ while True:
     time.sleep(0.05)
 
     
-    if distance2 > 15 < distance <= distance3 :
+    if distance2 > 5 < distance <= distance3 :
         place_found()
         
         break

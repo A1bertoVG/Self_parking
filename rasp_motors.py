@@ -25,7 +25,7 @@ pwm_b = GPIO.PWM(enb, 500)
 pwm_a.start(0)
 pwm_b.start(0)
 
-vel = 80
+vel = 65
 sta = 40
 
 def dir_foward():
