@@ -2,7 +2,7 @@
 
 import cmd
 import Schallsensor
-import Schallsensor2
+#import Schallsensor2
 import Schallsensor3
 import rasp_motors
 import time 
@@ -29,17 +29,19 @@ while True:
     rasp_motors.dir_foward()
     rasp_motors.vel_foward()
     distance = Schallsensor.get_distance()
-    distance2 = Schallsensor2.get_distance2()
+#    distance2 = Schallsensor2.get_distance2()
     distance3 = Schallsensor3.get_distance3()
 
     print(f'Distance 1 = {distance}')
-    print(f'Distance 2 = {distance2}')
+#   print(f'Distance 2 = {distance2}')
     print(f'Distance 3 = {distance3}')
 
     time.sleep(0.05)
 
     
-    if distance2 > 5 < distance <= distance3 :
+#    if (distance2 > 5 < distance <= distance3) :
+    if (distance > 10 <= distance3):
+	
         place_found()
         
         break

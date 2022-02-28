@@ -29,6 +29,7 @@ vel = 65
 sta = 40
 
 def dir_foward():
+							
     GPIO.output(in1, False)
     GPIO.output(in2, True)
     GPIO.output(in3, True)
@@ -49,23 +50,23 @@ def vel_backward():
     pwm_b.ChangeDutyCycle(sta)
 
 def park():
-    pwm_a.ChangeDutyCycle(50)
-    pwm_b.ChangeDutyCycle(78)
+    pwm_a.ChangeDutyCycle(80)
+    pwm_b.ChangeDutyCycle(60)
     GPIO.output(in1, True)
     GPIO.output(in2, False)
-    GPIO.output(in3, False)
-    GPIO.output(in4, True)
-    time.sleep(3)
+    GPIO.output(in3, True)
+    GPIO.output(in4, False)
+    time.sleep(5)
     pwm_a.ChangeDutyCycle(0)
     pwm_b.ChangeDutyCycle(0)
     time.sleep(2)
-    pwm_a.ChangeDutyCycle(78)
-    pwm_b.ChangeDutyCycle(50)
-    GPIO.output(in1, True)
-    GPIO.output(in2, False)
+    pwm_a.ChangeDutyCycle(60)
+    pwm_b.ChangeDutyCycle(80)
+    GPIO.output(in1, False)
+    GPIO.output(in2, True)
     GPIO.output(in3, False)
     GPIO.output(in4, True)
-    time.sleep(3)
+    time.sleep(5)
 
 '''
 while True:
@@ -73,13 +74,13 @@ while True:
 
     cmd = input("Ingrese S").lower()
 
-    if cmd == "s":
+    if cmd == "f":
         dir_foward()
         vel_foward()
-    elif cmd =="r":
+    elif cmd =="b":
         dir_backward()
         vel_backward()
-    elif cmd == "b":
+    elif cmd == "p":
         pwm_a.ChangeDutyCycle(0)
         pwm_b.ChangeDutyCycle(0)
         time.sleep(3)
@@ -87,8 +88,9 @@ while True:
         print ("System running")
         break
     print
-'''
 
+
+'''
 '''
 os.system('clear')
 
@@ -101,18 +103,20 @@ try:
         cmd = cmd.lower()
         
         dir = cmd[0]
-        #vel = cmd[1:4]
+        vel = cmd[1:4]
 
         if dir == "f":
             dir_foward()
             print("Avance hacia delante a una velocidad de ")
-            vel_backward()
+	    pwm_a.ChangeDutyCycle(vel)
+	    pwm_b.ChangeDutyCycle(vel)
 
 
         elif dir == "b":
             dir_backward()
             print("Avance hacia atras a una velocidad de ")
-            vel_foward()
+	    pwm_a.ChangeDutyCycle(vel)
+	    pwm_b.ChangeDutyCycle(vel)
 
         else:
             print("Comando no reconocido")
@@ -129,7 +133,7 @@ except KeyboardInterrupt:
     print("Programa terminado")
     print
     exit()
-'''
 
+'''
 
 
