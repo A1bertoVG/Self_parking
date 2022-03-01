@@ -51,22 +51,25 @@ def vel_backward():
 
 def park():
     pwm_a.ChangeDutyCycle(80)
-    pwm_b.ChangeDutyCycle(60)
+    pwm_b.ChangeDutyCycle(70)
     GPIO.output(in1, True)
     GPIO.output(in2, False)
     GPIO.output(in3, True)
     GPIO.output(in4, False)
-    time.sleep(5)
-    pwm_a.ChangeDutyCycle(0)
-    pwm_b.ChangeDutyCycle(0)
-    time.sleep(2)
-    pwm_a.ChangeDutyCycle(60)
+    time.sleep(1.3)
+    vel_backward()
+    dir_backward()
+    time.sleep(2.5)
+    pwm_a.ChangeDutyCycle(70)
     pwm_b.ChangeDutyCycle(80)
     GPIO.output(in1, False)
     GPIO.output(in2, True)
     GPIO.output(in3, False)
     GPIO.output(in4, True)
-    time.sleep(5)
+    time.sleep(1)
+    vel_backward()
+    dir_foward()
+    time.sleep(0.5)
 
 '''
 while True:
@@ -88,9 +91,9 @@ while True:
         print ("System running")
         break
     print
-
-
 '''
+
+
 '''
 os.system('clear')
 

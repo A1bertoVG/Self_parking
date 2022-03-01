@@ -10,6 +10,12 @@ GPIO.setmode (GPIO.BCM)
 trig = 14
 echo = 4
 
+#trig = 18
+#echo = 15
+
+#trig = 2
+#echo = 3
+
 GPIO.setup(trig, GPIO.OUT)
 GPIO.setup(echo, GPIO.IN)
 
@@ -35,7 +41,7 @@ def get_distance():
     #distance=sig_time*17150
     distance=round(distance,3)
 
-    #print ('Distance: {} cm'.format(distance))
+#    print ('Distance: {} cm'.format(distance))
     return distance
 
 
